@@ -1,0 +1,33 @@
+.sidebar{
+    flex: 0.18;
+    max-width: 300px;
+    padding-right: 15px;
+}
+
+.sidebar__compose{
+    margin-top: 5px !important;
+    margin-left: 10px !important;
+    margin-bottom: 15px !important;
+    text-transform: inherit !important;
+    background-color: #c2e7ff !important;
+    border-radius: 15px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    height: 55px !important;
+    font-weight: 550 !important;
+}
+
+.sidebar__compose:hover{
+    box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.6);
+}
+
+.sidebar__moreOptions > [label="moreOption"]{
+    display: none;
+    cursor: auto;
+}
+
+.sidebar__moreOptions__expand > [label="moreOption"]{
+    display: flex;
+}
