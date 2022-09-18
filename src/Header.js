@@ -9,8 +9,21 @@ import TuneIcon from '@mui/icons-material/Tune';
 import AppsRoundedIcon from '@mui/icons-material/AppsRounded';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectUser, logout } from './features/userSlice'
+import { auth, provider } from './firebase';
 
 function Header() {
+
+const user = useSelector(selectUser);
+const dispatch = useDispatch();
+
+const signOut = () => {
+    auth.signOut().then(()=>{
+        dispatch(logout());
+    });   
+};
+
   return (
     <div className="header">
         <div className="header__left">
@@ -39,8 +52,11 @@ function Header() {
             <AppsRoundedIcon/>
         </IconButton>
         <IconButton>
-            <Avatar/>
-        </IconButton>    
+            <div class="user__avatar">
+                <Avatar onClick={signOut} src={user?.photoUrl}/>
+                <p>Log Out</p>
+            </div>
+        </IconButton> 
         </div>
     </div>
   )

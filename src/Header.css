@@ -6,7 +6,6 @@
 }
 
 .header__left{
-    /* flex: 0.15; */
     display: flex;
     align-items: center;
     margin-left: 15px;
@@ -47,10 +46,6 @@
     margin: 5px;
 }
 
-/* .header__middle > .MuiSvgIcon-root:active{
-    color: gray;
-} */
-
 .header__middle > input {
     border: none;
     width: 100%;
@@ -72,4 +67,8 @@
 .header__right > .MuiSvgIcon-root{
     margin: 10px;
     color: #5f6368;
+}
+
+.user__avatar > p{
+    font-size: 11px;
 }

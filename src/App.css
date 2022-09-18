@@ -1,12 +1,10 @@
-body{
-  margin: 0;
-}
-
 .app{
   background-color: #f6f8fc;
   height: 100vh;
+  /* overflow: hidden; */
 }
 
 .app__body{
   display: flex;
+  height: fit-content;
 }
